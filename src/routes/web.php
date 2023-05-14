@@ -15,9 +15,7 @@ use App\Http\Controllers\CategoryController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
 Route::get('/', [TodoController::class, 'index']);
 Route::post('/todos', [TodoController::class,'store']);
 Route::patch('/todos/update', [TodoController::class, 'update']);
